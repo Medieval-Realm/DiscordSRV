@@ -13,7 +13,7 @@ loadbefore: [
 ]
 softdepend: [
   # Chat plugins
-  Herochat, Legendchat, LunaChat, TownyChat, VentureChat,
+  Herochat, Legendchat, LunaChat, TownyChat, UltimateChat, VentureChat,
   # Vanish plugins
   Essentials, PhantomAdmin, SuperVanish, VanishNoPacket, PremiumVanish,
   # Misc. plugins
