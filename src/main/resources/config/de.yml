@@ -95,8 +95,9 @@ Experiment_MCDiscordReserializer_InBroadcast: false
 
 # Andere
 CancelConsoleCommandIfLoggingFailed: true
-# LunarClient does not support hover/click components in messages. Users of LunarClient will receive an automated
+# LunarClient does not support copy_to_clipboard click components in messages. Users of LunarClient will receive an automated
 # message stating that their user experience is worsened by the use of the client, if this option is enabled
+# See https://github.com/DiscordSRV/DiscordSRV/pull/1294 for more details
 EnableIncompatibleClientAlert: true
 ForcedLanguage: none
 PrintGuildsAndChannels: true
@@ -147,6 +148,7 @@ StatusUpdateRateInMinutes: 2
 # DiscordChatChannelEmojiBehavior: Gibt an, wie Emojis nach Minecraft gesendet werden. Kann die Werte "show", "name" oder "hide" annehmen.
 # DiscordChatChannelEmoteBehavior: Gibt an, wie Emotes nach Minecraft gesendet werden. Kann die Werte "name" oder "hide" annehmen.
 # DiscordChatChannelPrefixRequiredToProcessMessage: nur Nachrichten mit diesem Präfix werden von Minecraft nach Discord geschickt (z.B. "!")
+# DiscordChatChannelPrefixActsAsBlacklist: Ob das Präfix als schwarze Liste fungieren soll oder nicht
 # DiscordChatChannelRolesAllowedToUseColorCodesInChat: Liste mit Gruppen, die bei Nachrichten von Discord nach Minecraft (Farb-)formatierungscodes benutzen dürfen
 # DiscordChatChannelBroadcastDiscordMessagesToConsole: legt fest, ob Nachrichten von Discord nach Minecraft zusätzlich an die Konsole geschickt werden sollen
 # DiscordChatChannelRequireLinkedAccount: gibt an, ob Spieler ihren Discord und Minecraft Account erst verbinden müssen, damit sie Nachrichten von Discord nach Minecraft senden dürfen
@@ -166,6 +168,7 @@ DiscordChatChannelAllowedMentions: [user, channel, emote]
 DiscordChatChannelEmojiBehavior: "name"
 DiscordChatChannelEmoteBehavior: "name"
 DiscordChatChannelPrefixRequiredToProcessMessage: ""
+DiscordChatChannelPrefixActsAsBlacklist: false
 DiscordChatChannelRolesAllowedToUseColorCodesInChat: ["Developer", "Owner", "Admin", "Moderator"]
 DiscordChatChannelBroadcastDiscordMessagesToConsole: true
 DiscordChatChannelRequireLinkedAccount: false
@@ -192,6 +195,7 @@ DiscordChatChannelRoleAliases: {"Developer": "Dev"}
 # DiscordConsoleChannelBlacklistedCommands: Befehle, die über den Konsolenkanal nicht ausführbar sein sollen
 # DiscordConsoleChannelFilters: Regex-Filter, die auf Konsolenleitungen angewendet werden sollen, die an Discord gesendet werden. Wenn das Ergebnis leer ist, wird die Nachricht überhaupt nicht gesendet
 # DiscordConsoleChannelLevels: Log-Level der Befehlsausgaben, die im Konsolenkanal angezeigt werden
+# DiscordConsoleChannelUseCodeBlocks: wenn die Konsole in Codeblöcke verpackt und eingefärbt werden soll
 # DiscordConsoleChannelAllowPluginUpload: Wenn Plugins in den Konsolenkanal hochgeladen werden, werden sie automatisch zum Server hinzugefügt
 # DiscordConsoleChannelBlockBots: ob es Bots erlaubt sein soll, Befehle im Konsolenkanal zu senden
 #
@@ -201,6 +205,7 @@ DiscordConsoleChannelBlacklistActsAsWhitelist: false
 DiscordConsoleChannelBlacklistedCommands: ["?", "op", "deop", "execute"]
 DiscordConsoleChannelFilters: {".*(?i)async chat thread.*": "", ".*There are \\d+ (?:of a max of|out of maximum) \\d+ players online.*": ""}
 DiscordConsoleChannelLevels: [info, warn, error]
+DiscordConsoleChannelUseCodeBlocks: true
 DiscordConsoleChannelAllowPluginUpload: false
 DiscordConsoleChannelBlockBots: false
 
